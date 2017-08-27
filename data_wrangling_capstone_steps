@@ -1,0 +1,34 @@
+Create a short document (1-2 pages) in your github describing the data wrangling steps that you undertook to clean your capstone project data set. 
+	What kind of cleaning steps did you perform? 
+	How did you deal with missing values, if any? 
+	Were there outliers, and how did you decide to handle them? 
+This document will eventually become part of your milestone report.
+
+The dataset is a relational set of files describing customers' orders over time. It's a total of 6 files.
+Each entity (customer, product, order, aisle, etc.) has an associated unique id. Most of the files and variable names are self-explanatory.
+
+For the data wrangling I'll use pandas in iPython.
+
+So for every dataset I started by: 
+	read the csv file
+	check unicode
+It all loaded easily as expected
+
+Next for every dataset I ran df.info() so I could find out the types and have an idea of missing values.
+
+Aisles, Departments, Train and Products didn't have any missing value.
+
+I found missing values in the dataset Orders. In the column days_since_prior_order.
+Looking closely I've notested that the missing values were related to the first user buy. Since there were no prior days on the first purchase.
+The options of filling with values, dropping or interpolate aren't suitable in my opinion. So I decide to leave them for later decision according to the analysis to be performed.
+
+Didn't find outliers in the data.
+
+Conclusion as this files were provided by the company for a kaggle competetion the data is already pretty clean.
+
+There are a lot of identifiers, so I've placed them as index on:
+aisles
+dptmts
+products
+
+
