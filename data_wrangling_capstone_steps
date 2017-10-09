@@ -19,16 +19,13 @@ Next for every dataset I ran df.info() so I could find out the types and have an
 Aisles, Departments, Train and Products didn't have any missing value.
 
 I found missing values in the dataset Orders. In the column days_since_prior_order.
-Looking closely I've notested that the missing values were related to the first user buy. Since there were no prior days on the first purchase.
-The options of filling with values, dropping or interpolate aren't suitable in my opinion. So I decide to leave them for later decision according to the analysis to be performed.
+Looking closely I've notested that it had a logical reason and a clear pattern. As this variable counts the days since the last order,
+the first order ever made by the customer would not have any value for 'days since prior order'.
+
+The options of filling with values, dropping or interpolate aren't suitable in my opinion. So I decide to leave them for later 
+decision according to the analysis to be performed.
 
 Didn't find outliers in the data.
 
-Conclusion as this files were provided by the company for a kaggle competetion the data is already pretty clean.
-
-There are a lot of identifiers, so I've placed them as index on:
-aisles
-dptmts
-products
-
-
+Conclusion as this files were provided by the company for a kaggle competetion the data is already pretty clean and weren't in need for
+cleaning and adjusting.
